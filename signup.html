@@ -10,33 +10,33 @@
 
 	mixpanel.track("Page Viewed", {"Name": "Signup"});
 
-	// function login() {
-	//     mixpanel.alias(document.getElementById("email").value);
-
-	//     function waitForIt(){
-	//         mixpanel.people.set({
-	//             "$name": document.getElementById("name").value, 
-	//             "$email": document.getElementById("email").value,
-	//             "Favorite Music": document.getElementById("musicSelect").value
-	//         });
-	//     }
-	    
-	//     setTimeout(waitForIt, 1000);
-	// }
-
 	function login() {
-	    mixpanel.identify(document.getElementById("email").value);
+	    mixpanel.alias(document.getElementById("email").value);
 
-	    // function waitForIt(){
-	    //     mixpanel.people.set({
-	    //         "$name": document.getElementById("name").value, 
-	    //         "$email": document.getElementById("email").value,
-	    //         "Favorite Music": document.getElementById("musicSelect").value
-	    //     });
-	    // }
+	    function waitForIt(){
+	        mixpanel.people.set({
+	            "$name": document.getElementById("name").value, 
+	            "$email": document.getElementById("email").value,
+	            "Favorite Music": document.getElementById("musicSelect").value
+	        });
+	    }
 	    
 	    setTimeout(waitForIt, 1000);
 	}
+
+	// function login() {
+	//     mixpanel.identify(document.getElementById("email").value);
+
+	//     // function waitForIt(){
+	//     //     mixpanel.people.set({
+	//     //         "$name": document.getElementById("name").value, 
+	//     //         "$email": document.getElementById("email").value,
+	//     //         "Favorite Music": document.getElementById("musicSelect").value
+	//     //     });
+	//     // }
+	    
+	//     setTimeout(waitForIt, 1000);
+	// }
 
 
 
